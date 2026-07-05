@@ -24,9 +24,9 @@ This works whether or not the tool auto-discovers `AGENTS.md`/`CLAUDE.md` on its
 | Language | Status | Verifies |
 |---|---|---|
 | Python | done | [vanilla-compost](https://github.com/EcologyComputing/vanilla-compost) |
+| Node | done | [vanilla-compost](https://github.com/EcologyComputing/vanilla-compost) |
 | Java | planned | TBD |
 | C# | planned | TBD |
-| Node | planned | TBD |
 | Rust | planned | TBD |
 | Go | planned | TBD |
 
