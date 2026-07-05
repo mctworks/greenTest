@@ -26,7 +26,7 @@ fi
 # don't ship 'python' by default.
 if ! which python >/dev/null 2>&1; then
     mkdir -p "$HOME/.local/bin"
-    ln -s "$(which python3)" "$HOME/.local/bin/python"
+    ln -sf "$(which python3)" "$HOME/.local/bin/python"
     echo "No 'python' command found - symlinked it to your verified python3 at $HOME/.local/bin/python"
     case ":$PATH:" in
         *":$HOME/.local/bin:"*) ;;
