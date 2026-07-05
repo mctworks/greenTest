@@ -1,3 +1,10 @@
+// This is a smoke test, not the onboarding path - it's for developers who've
+// already been through greentest.ipynb once and just want a fast, scriptable
+// way to confirm the environment still works before they start coding. New
+// to this GreenTest? Use the notebook instead; it explains each step as it
+// goes. (Python has no equivalent script - its notebook is the one required
+// starting point for everyone, so there's nothing to fast-path past yet.)
+
 const fs = require('fs');
 const path = require('path');
 const { execSync, spawn } = require('child_process');
@@ -21,7 +28,7 @@ if (!fs.existsSync(readmePath) || !fs.existsSync(generatorPath)) {
 console.log("Step 2: Repo layout confirmed (found README.md and generate_posts.js).");
 
 // Step 3: Leave a note
-const logPath = "greentest-log.md";
+const logPath = "greenTest-Message.md";
 const timestamp = new Date().toISOString().slice(0, 16).replace('T', ' ');
 
 function writeNotesAndProceed(notes) {
@@ -29,7 +36,7 @@ function writeNotesAndProceed(notes) {
     fs.appendFileSync(logPath, logContent, 'utf8');
     console.log(`Step 3: Notes appended to ${logPath}`);
 
-    // Step 4: Copy greentest-log.md to posts/ directory in vanilla-compost
+    // Step 4: Copy greenTest-Message.md to posts/ directory in vanilla-compost
     const postsDir = path.join(destDir, 'src', 'posts');
     if (!fs.existsSync(postsDir)) {
         fs.mkdirSync(postsDir, { recursive: true });

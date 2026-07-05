@@ -32,6 +32,8 @@ This works whether or not the tool auto-discovers `AGENTS.md`/`CLAUDE.md` on its
 
 Each one follows the same shape: `bootstrap.sh` gets the language's toolchain ready, then a notebook (or that language's closest equivalent) generates a tiny static site, serves it locally, and verifies the served output matches what was generated.
 
+The notebook is the required starting point for everyone - that's where a language explains itself as it goes. Python has nothing else, since its notebook is the one everyone is assumed to have been through first. Other languages may *also* ship a plain script alongside the notebook (e.g. `js/greentest.js`) as a smoke test - for a developer who's already done the notebook once and just wants a fast, scriptable way to confirm the environment still works before they start coding. That script is never the recommended first stop.
+
 ## Also here
 
 - `ECOLOGY.md` - the methodology: guiding principles, mapping approach, how to work with this repo as a human, an agent, or both. `AGENTS.md` is a one-line pointer to it, kept only so tools that auto-discover that filename by convention still find their way here.
