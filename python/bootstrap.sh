@@ -3,7 +3,8 @@ set -e
 
 echo "Vanilla Compost GreenTest bootstrap"
 echo "===================================="
-
+# 0. Install basic tooling
+sudo apt update && sudo apt install git curl python3 python3-pip python3-venv
 # 1. Check python3 is installed
 if ! which python3 >/dev/null 2>&1; then
     echo "python3 was not found on your system. Install it first:"
@@ -89,5 +90,5 @@ fi
 echo "Jupyter is ready."
 
 # 8. Launch the GreenTest notebook
-echo "Starting greentest.ipynb..."
-python -m jupyter notebook greentest.ipynb
+# echo "Starting greentest.ipynb..."
+# python -m jupyter notebook greentest.ipynb
