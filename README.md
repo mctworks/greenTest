@@ -37,4 +37,3 @@ The notebook is the required starting point for everyone - that's where a langua
 ## Also here
 
 - `ECOLOGY.md` - the methodology: guiding principles, mapping approach, how to work with this repo as a human, an agent, or both. `AGENTS.md` is a one-line pointer to it, kept only so tools that auto-discover that filename by convention still find their way here.
-- `ralph-loop-template/` - a ready-to-copy scaffold for running an unattended agentic loop against a well-scoped batch of tasks, pre-filled with Ecology Computing's conventions.
