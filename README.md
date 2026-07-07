@@ -7,7 +7,7 @@ GreenTests are extended READMEs: instead of just describing how to verify a lang
 ## Quickstart
 
 1. Make sure you have `git` (usually already there, or one command/prompt away on any OS).
-2. Clone whichever other Ecology Computing repos you're about to work on as siblings of this one (`vanilla-compost`, `ecology-computing.com`, `chriscorriere.com`, `maps`, ...).
+2. Clone whichever other repos you're about to work on as siblings of this one, like `vanilla-compost`.
 3. Pick the language you need below, `cd` into it, and run its bootstrap script.
 4. Read [`ECOLOGY.md`](./ECOLOGY.md) for the methodology this all sits inside - the guiding principles, the mapping approach, and the convention for working with this repo whether you're a person, an AI agent, or both.
 
