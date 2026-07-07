@@ -42,5 +42,3 @@ Source maps are draw.io XML, exported to PNG or SVG for embedding. See the `maps
 | Repo | What it is |
 |---|---|
 | `vanilla-compost` | The static-site template other sites are built on; also the flagship GreenTest demo app |
-| `maps` | Draw.io sources and exported diagrams; the mapping methodology in practice |
-| `ecology-computing.com` | Maintains this working convention |
