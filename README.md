@@ -13,11 +13,11 @@ GreenTests are extended READMEs: instead of just describing how to verify a lang
 
 ## Starting a session
 
-Opening prompt for a fresh CLI LLM session (Claude Code or otherwise), once you've cloned this repo:
+Opening prompt for a fresh CLI LLM session, once you've cloned this repo:
 
-> Let's chat about what we're working on. See greenTest. Update CLAUDE.md as needed. What do we need to pair on, what can we hand to a ralph loop?
+> Let's chat about what we're working on. See greenTest. Update your AGENTS.md as needed.
 
-This works whether or not the tool auto-discovers `AGENTS.md`/`CLAUDE.md` on its own - it explicitly points the session at this repo, asks it to keep the project's own `CLAUDE.md` current as you go, and forces the pair-vs-loop triage up front instead of letting that decision happen by default.
+This works whether or not the tool auto-discovers `AGENTS.md` on its own since it explicitly points the session at this repo and asks it to keep the project's own `AGENTS.md` current as you go.
 
 ## Languages
 
