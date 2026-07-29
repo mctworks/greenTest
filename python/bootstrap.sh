@@ -4,13 +4,11 @@ set -e
 echo "Vanilla Compost GreenTest bootstrap"
 echo "===================================="
 # 0. Install basic tooling
-sudo apt update && sudo apt install git curl python3 python3-pip python3-venv
+sudo apt update && sudo apt install git curl wget python3 python3-pip python3-venv
 # 1. Check python3 is installed
 if ! which python3 >/dev/null 2>&1; then
     echo "python3 was not found on your system. Install it first:"
-    echo "  macOS:   brew install python3   (or https://www.python.org/downloads/)"
-    echo "  Linux:   sudo apt install python3 python3-pip python3-venv   (or your distro's equivalent)"
-    echo "  Windows: https://www.python.org/downloads/ (check 'Add python.exe to PATH' during install)"
+    echo "  sudo apt install python3 python3-pip python3-venv"
     exit 1
 fi
 echo "Found $(python3 --version) at $(which python3)"
@@ -25,16 +23,28 @@ fi
 # there's no bare 'python' command, symlink it to this verified python3 rather
 # than requiring one to already exist - many systems (Debian/Ubuntu especially)
 # don't ship 'python' by default.
+# Persists $HOME/.local/bin on PATH for future shells (appends to ~/.bashrc,
+# only if not already there) and exports it now so the rest of *this* script
+# sees it immediately. Doesn't source ~/.bashrc - Debian's default one
+# returns early for non-interactive shells (which is what this script is),
+# so sourcing it here would be a no-op, not a real update.
+ensure_path() {
+    local dir="$1"
+    case ":$PATH:" in
+        *":$dir:"*) ;;
+        *) export PATH="$dir:$PATH" ;;
+    esac
+    if ! grep -qxF "export PATH=\"$dir:\$PATH\"" "$HOME/.bashrc" 2>/dev/null; then
+        echo "export PATH=\"$dir:\$PATH\"" >> "$HOME/.bashrc"
+        echo "Added $dir to PATH in ~/.bashrc for future shells."
+    fi
+}
+
 if ! which python >/dev/null 2>&1; then
     mkdir -p "$HOME/.local/bin"
     ln -sf "$(which python3)" "$HOME/.local/bin/python"
     echo "No 'python' command found - symlinked it to your verified python3 at $HOME/.local/bin/python"
-    case ":$PATH:" in
-        *":$HOME/.local/bin:"*) ;;
-        *) echo "Note: add this to your shell profile (~/.bashrc, ~/.zshrc, etc.) so it's still there in new terminals:"
-           echo "  export PATH=\"\$HOME/.local/bin:\$PATH\"" ;;
-    esac
-    export PATH="$HOME/.local/bin:$PATH"
+    ensure_path "$HOME/.local/bin"
 fi
 
 # 4. Best-effort: compare against the latest known release (informational only,
@@ -59,27 +69,23 @@ fi
 cd "$(dirname "$0")"
 
 # 6. Set up a virtual environment for Jupyter, rather than installing into the
-# system python directly. This isn't just tidiness: modern Debian/Ubuntu (and
-# similar) refuse "pip install" outside a venv on purpose (PEP 668,
+# system python directly. This isn't just tidiness: Debian/Ubuntu refuses
+# "pip install" outside a venv on purpose (PEP 668,
 # "externally-managed-environment") to stop exactly what installing straight
-# into system python does. A venv sidesteps that entirely and behaves the same
-# way on Windows/macOS/Linux, instead of asking anyone to change how python
-# itself is installed on a machine that already works fine for everything else.
-if [ ! -f ".venv/bin/activate" ] && [ ! -f ".venv/Scripts/activate" ]; then
+# into system python does. A venv sidesteps that entirely, instead of asking
+# anyone to change how python itself is installed on a machine that already
+# works fine for everything else.
+if [ ! -f ".venv/bin/activate" ]; then
     echo "Creating a virtual environment at python/.venv..."
     if ! python -m venv .venv; then
         rm -rf .venv  # venv creates the directory before it can fail - don't leave a broken one behind
-        echo "Could not create a virtual environment. On Debian/Ubuntu this usually means:"
+        echo "Could not create a virtual environment. This usually means:"
         echo "  sudo apt install python3-venv"
         exit 1
     fi
 fi
 
-if [ -f ".venv/bin/activate" ]; then
-    source ".venv/bin/activate"
-else
-    source ".venv/Scripts/activate"
-fi
+source ".venv/bin/activate"
 
 # 7. Check for / install Jupyter, inside the venv - this pip install is safe
 # now regardless of how the system python outside the venv is managed.

@@ -1,0 +1,154 @@
+<mxfile host="Electron">
+  <diagram id="cloud-vsm" name="Cloud VSM">
+    <mxGraphModel dx="1030" dy="626" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="760" pageHeight="340" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="orgLabel" parent="1" style="text;html=1;align=center;verticalAlign=middle;fontStyle=1;fontSize=13;" value="ORGANIZATION" vertex="1">
+          <mxGeometry height="22" width="100" x="340" y="10" as="geometry" />
+        </mxCell>
+        <mxCell id="feedbackEdge1" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;startArrow=none;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="560" y="20" />
+            </Array>
+            <mxPoint x="560" y="110" as="sourcePoint" />
+            <mxPoint x="450" y="20.012987012987026" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="feedbackEdge2" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;startArrow=none;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="330" y="20" as="sourcePoint" />
+            <mxPoint x="230" y="110" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sliLabel" parent="1" style="text;html=1;align=center;fontStyle=2;fontSize=11;" value="SLIs" vertex="1">
+          <mxGeometry height="18" width="120" x="140" y="78" as="geometry" />
+        </mxCell>
+        <mxCell id="sloLabel" parent="1" style="text;html=1;align=center;fontStyle=2;fontSize=11;" value="SLOs" vertex="1">
+          <mxGeometry height="18" width="120" x="330" y="78" as="geometry" />
+        </mxCell>
+        <mxCell id="slaLabel" parent="1" style="text;html=1;align=center;fontStyle=2;fontSize=11;" value="SLAs" vertex="1">
+          <mxGeometry height="18" width="120" x="520" y="78" as="geometry" />
+        </mxCell>
+        <mxCell id="nonProdLine" edge="1" parent="1" style="html=1;endArrow=none;startArrow=none;dashed=1;strokeColor=#666666;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="170" y="202" as="sourcePoint" />
+            <mxPoint x="450" y="202" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nonProdLabel" parent="1" style="text;html=1;align=center;fontStyle=2;fontSize=10;" value="non-prod" vertex="1">
+          <mxGeometry height="16" width="280" x="160" y="202" as="geometry" />
+        </mxCell>
+        <mxCell id="errBudgetLine" edge="1" parent="1" style="html=1;endArrow=none;startArrow=none;dashed=1;strokeColor=#666666;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="450" y="237.76" as="sourcePoint" />
+            <mxPoint x="610" y="237.76" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="errBudgetLabel" parent="1" style="text;html=1;align=center;fontStyle=2;fontSize=10;" value="error budgets" vertex="1">
+          <mxGeometry height="16" width="160" x="450" y="232" as="geometry" />
+        </mxCell>
+        <mxCell id="supply" parent="1" style="text;html=1;align=center;verticalAlign=middle;fontStyle=1;fontSize=13;" value="SUPPLY" vertex="1">
+          <mxGeometry height="30" width="70" x="50" y="135" as="geometry" />
+        </mxCell>
+        <mxCell id="customer" parent="1" style="text;html=1;align=center;verticalAlign=middle;fontStyle=1;fontSize=13;" value="CUSTOMER" vertex="1">
+          <mxGeometry height="30" width="110" x="650" y="135" as="geometry" />
+        </mxCell>
+        <mxCell id="dev" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#4a90d9;strokeColor=#2d6ca2;fontColor=#ffffff;fontSize=14;fontStyle=1;" value="DEV" vertex="1">
+          <mxGeometry height="80" width="120" x="170" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="uat" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#7d5ba6;strokeColor=#563a7a;fontColor=#ffffff;fontSize=14;fontStyle=1;" value="UAT" vertex="1">
+          <mxGeometry height="80" width="120" x="330" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="prod" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#5cb85c;strokeColor=#3d8b3d;fontColor=#ffffff;fontSize=14;fontStyle=1;" value="PROD" vertex="1">
+          <mxGeometry height="80" width="120" x="490" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="arrowSupplyDev" edge="1" parent="1" source="supply" style="html=1;endArrow=block;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="150" y="150" as="sourcePoint" />
+            <mxPoint x="170" y="150" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arrowDevUat" edge="1" parent="1" style="html=1;endArrow=block;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="290" y="150" as="sourcePoint" />
+            <mxPoint x="330" y="150" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arrowUatProd" edge="1" parent="1" style="html=1;endArrow=block;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="450" y="150" as="sourcePoint" />
+            <mxPoint x="490" y="150" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arrowProdCustomer" edge="1" parent="1" style="html=1;endArrow=block;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="610" y="150" as="sourcePoint" />
+            <mxPoint x="650" y="150" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="devopsBar" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#2aa1e0;strokeColor=none;fontColor=#ffffff;fontSize=11;fontStyle=1;" value="devOps Practices" vertex="1">
+          <mxGeometry height="22" width="190" x="170" y="224" as="geometry" />
+        </mxCell>
+        <mxCell id="sharedBar" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#6f42c1;strokeColor=none;fontColor=#ffffff;fontSize=9;fontStyle=1;" value="Shared Practices" vertex="1">
+          <mxGeometry height="22" width="90" x="360" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="sreBar" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d9534f;strokeColor=none;fontColor=#ffffff;fontSize=11;fontStyle=1;" value="SRE Practices" vertex="1">
+          <mxGeometry height="22" width="160" x="450" y="202" as="geometry" />
+        </mxCell>
+        <mxCell id="timelineAxis" edge="1" parent="1" style="html=1;endArrow=none;startArrow=none;strokeColor=#333333;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="60" y="255" as="sourcePoint" />
+            <mxPoint x="700" y="255" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wipTick" edge="1" parent="1" style="html=1;endArrow=none;startArrow=none;strokeColor=#333333;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="100" y="245" as="sourcePoint" />
+            <mxPoint x="100" y="255" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wipLabel" parent="1" style="text;html=1;align=center;fontStyle=2;fontSize=10;" value="WIP" vertex="1">
+          <mxGeometry height="16" width="60" x="70" y="224" as="geometry" />
+        </mxCell>
+        <mxCell id="commitTick" edge="1" parent="1" style="html=1;endArrow=none;startArrow=none;strokeColor=#333333;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="170" y="255" as="sourcePoint" />
+            <mxPoint x="170" y="270" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="commitLabel" parent="1" style="text;html=1;align=center;fontStyle=2;fontSize=10;" value="initial commit" vertex="1">
+          <mxGeometry height="16" width="120" x="110" y="273" as="geometry" />
+        </mxCell>
+        <mxCell id="deployTick" edge="1" parent="1" style="html=1;endArrow=none;startArrow=none;strokeColor=#333333;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="450" y="260" />
+            </Array>
+            <mxPoint x="450" y="255" as="sourcePoint" />
+            <mxPoint x="450" y="270" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="deployLabel" parent="1" style="text;html=1;align=center;fontStyle=2;fontSize=10;" value="prod deployment" vertex="1">
+          <mxGeometry height="16" width="120" x="390" y="273" as="geometry" />
+        </mxCell>
+        <mxCell id="releaseTick" edge="1" parent="1" style="html=1;endArrow=none;startArrow=none;strokeColor=#333333;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="610" y="255" as="sourcePoint" />
+            <mxPoint x="610" y="270" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="releaseLabel" parent="1" style="text;html=1;align=center;fontStyle=2;fontSize=10;" value="prod release" vertex="1">
+          <mxGeometry height="16" width="120" x="550" y="273" as="geometry" />
+        </mxCell>
+        <mxCell id="cicdLabel" parent="1" style="text;html=1;align=center;fontStyle=3;fontSize=14;" value="CI/CD wait time" vertex="1">
+          <mxGeometry height="24" width="440" x="170" y="296" as="geometry" />
+        </mxCell>
+        <mxCell id="8zX0pK0WLXtjp8h1CNJf-4" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Cloud Platform Value Stream" vertex="1">
+          <mxGeometry height="30" width="110" x="60" y="20" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

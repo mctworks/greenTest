@@ -1,0 +1,158 @@
+<mxfile host="Electron">
+  <diagram id="BQZlWxoDUpCgPgi5XlZ_" name="Page-1">
+    <mxGraphModel dx="1030" dy="626" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <UserObject label="" mermaidData="{&#xa;  &quot;data&quot;: &quot;wardley-beta\ntitle GreenTest - Bootstrapping &amp; Verifying a Linux Environment\n\nanchor Developer [0.94, 0.23]\ncomponent Verified Environment [0.88, 0.29]\ncomponent vanilla compost running locally [0.72, 0.4]\ncomponent \&quot;bootstrap.sh\&quot; [0.53, 0.62]\ncomponent \&quot;greenTest.ipynb\&quot; [0.79, 0.6]\ncomponent \&quot;vanilla compost or your own repo\&quot; [0.62, 0.45]\ncomponent bash [0.4, 0.85]\ncomponent linux [0.3, 0.85]\n\nDeveloper -&gt; Verified Environment\nVerified Environment -&gt; vanilla compost running locally\nvanilla compost running locally -&gt; \&quot;greenTest.ipynb\&quot;\n\&quot;greenTest.ipynb\&quot; -&gt; \&quot;bootstrap.sh\&quot;\nvanilla compost running locally -&gt; \&quot;vanilla compost or your own repo\&quot;\n\&quot;bootstrap.sh\&quot; -&gt; bash\nbash -&gt; linux&quot;,&#xa;  &quot;config&quot;: null&#xa;}" id="37">
+          <mxCell connectable="0" parent="1" style="group;transparentBounds=1;editIcon=1;lockedGroup=0;groupPadding=20;" vertex="1">
+            <mxGeometry height="110" width="312" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="2" edge="1" parent="37" style="endArrow=none;startArrow=none;html=1;rounded=0;strokeWidth=1;strokeColor=#333333;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="160" y="556" as="sourcePoint" />
+            <mxPoint x="964" y="556" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3" edge="1" parent="37" style="endArrow=none;startArrow=none;html=1;rounded=0;strokeWidth=1;strokeColor=#333333;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="160" y="52" as="sourcePoint" />
+            <mxPoint x="160" y="556" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4" parent="37" style="text;html=1;strokeColor=none;fillColor=none;fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=12;fontColor=#131300;align=center;verticalAlign=middle;fontStyle=1;" value="Evolution" vertex="1">
+          <mxGeometry height="16" width="200" x="462" y="576" as="geometry" />
+        </mxCell>
+        <mxCell id="5" parent="37" style="text;html=1;strokeColor=none;fillColor=none;fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=12;fontColor=#131300;align=center;verticalAlign=middle;fontStyle=1;rotation=-90;" value="Visibility" vertex="1">
+          <mxGeometry height="16" width="200" x="20" y="296" as="geometry" />
+        </mxCell>
+        <mxCell id="6" parent="37" style="text;html=1;strokeColor=none;fillColor=none;fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=10;fontColor=#131300;align=center;verticalAlign=middle;" value="Genesis" vertex="1">
+          <mxGeometry height="14" width="160" x="181" y="558" as="geometry" />
+        </mxCell>
+        <mxCell id="7" edge="1" parent="37" style="endArrow=none;startArrow=none;html=1;rounded=0;strokeWidth=1;dashed=1;dashPattern=5 5;opacity=80;strokeColor=#333333;fixDash=1;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="361" y="52" as="sourcePoint" />
+            <mxPoint x="361" y="556" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8" parent="37" style="text;html=1;strokeColor=none;fillColor=none;fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=10;fontColor=#131300;align=center;verticalAlign=middle;" value="Custom Built" vertex="1">
+          <mxGeometry height="14" width="160" x="382" y="558" as="geometry" />
+        </mxCell>
+        <mxCell id="9" edge="1" parent="37" style="endArrow=none;startArrow=none;html=1;rounded=0;strokeWidth=1;dashed=1;dashPattern=5 5;opacity=80;strokeColor=#333333;fixDash=1;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="562" y="52" as="sourcePoint" />
+            <mxPoint x="562" y="556" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="10" parent="37" style="text;html=1;strokeColor=none;fillColor=none;fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=10;fontColor=#131300;align=center;verticalAlign=middle;" value="Product" vertex="1">
+          <mxGeometry height="14" width="160" x="583" y="558" as="geometry" />
+        </mxCell>
+        <mxCell id="11" edge="1" parent="37" style="endArrow=none;startArrow=none;html=1;rounded=0;strokeWidth=1;dashed=1;dashPattern=5 5;opacity=80;strokeColor=#333333;fixDash=1;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="763" y="52" as="sourcePoint" />
+            <mxPoint x="763" y="556" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="12" parent="37" style="text;html=1;strokeColor=none;fillColor=none;fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=10;fontColor=#131300;align=center;verticalAlign=middle;" value="Commodity" vertex="1">
+          <mxGeometry height="14" width="160" x="784" y="558" as="geometry" />
+        </mxCell>
+        <UserObject label="" mermaidId="n:component:Verified Environment" mermaidBaseStyle="ellipse;html=1;fillColor=#ffffff;strokeColor=#333333;strokeWidth=1;" mermaidBaseValue="" id="14">
+          <mxCell parent="37" style="ellipse;html=1;fillColor=#ffffff;strokeColor=#333333;strokeWidth=1;" vertex="1">
+            <mxGeometry height="12" width="12" x="387" y="106" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" mermaidId="n:component:vanilla compost running locally" mermaidBaseStyle="ellipse;html=1;fillColor=#ffffff;strokeColor=#333333;strokeWidth=1;" mermaidBaseValue="" id="15">
+          <mxCell parent="37" style="ellipse;html=1;fillColor=#ffffff;strokeColor=#333333;strokeWidth=1;" vertex="1">
+            <mxGeometry height="12" width="12" x="476" y="187" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" mermaidId="n:component:bootstrap.sh" mermaidBaseStyle="ellipse;html=1;fillColor=#ffffff;strokeColor=#333333;strokeWidth=1;" mermaidBaseValue="" id="16">
+          <mxCell parent="37" style="ellipse;html=1;fillColor=#ffffff;strokeColor=#333333;strokeWidth=1;" vertex="1">
+            <mxGeometry height="12" width="12" x="710" y="296" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" mermaidId="n:component:greenTest.ipynb" mermaidBaseStyle="ellipse;html=1;fillColor=#ffffff;strokeColor=#333333;strokeWidth=1;" mermaidBaseValue="" id="17">
+          <mxCell parent="37" style="ellipse;html=1;fillColor=#ffffff;strokeColor=#333333;strokeWidth=1;" vertex="1">
+            <mxGeometry height="12" width="12" x="583" y="118" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" mermaidId="n:component:vanilla compost" mermaidBaseStyle="ellipse;html=1;fillColor=#ffffff;strokeColor=#333333;strokeWidth=1;" mermaidBaseValue="" id="18">
+          <mxCell parent="37" style="ellipse;html=1;fillColor=#ffffff;strokeColor=#333333;strokeWidth=1;" vertex="1">
+            <mxGeometry height="12" width="12" x="613" y="240" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" mermaidId="n:component:bash" mermaidBaseStyle="ellipse;html=1;fillColor=#ffffff;strokeColor=#333333;strokeWidth=1;" mermaidBaseValue="" id="19">
+          <mxCell parent="37" style="ellipse;html=1;fillColor=#ffffff;strokeColor=#333333;strokeWidth=1;" vertex="1">
+            <mxGeometry height="12" width="12" x="837" y="348" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" mermaidId="n:component:linux" mermaidBaseStyle="ellipse;html=1;fillColor=#ffffff;strokeColor=#333333;strokeWidth=1;" mermaidBaseValue="" id="20">
+          <mxCell parent="37" style="ellipse;html=1;fillColor=#ffffff;strokeColor=#333333;strokeWidth=1;" vertex="1">
+            <mxGeometry height="12" width="12" x="837" y="399" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="21" edge="1" parent="37" source="ikJxmT06obLQD2iymKop-37" style="edgeStyle=none;html=1;rounded=0;strokeWidth=1;strokeColor=#333333;startArrow=none;endArrow=none;startFill=1;endFill=1;exitX=1;exitY=0.333;exitDx=0;exitDy=0;exitPerimeter=0;" target="14">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="290" y="82" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="22" edge="1" parent="37" source="14" style="edgeStyle=none;html=1;rounded=0;strokeWidth=1;strokeColor=#333333;startArrow=none;endArrow=none;startFill=1;endFill=1;" target="15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="23" edge="1" parent="37" source="15" style="edgeStyle=none;html=1;rounded=0;strokeWidth=1;strokeColor=#333333;startArrow=none;endArrow=none;startFill=1;endFill=1;" target="17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="24" edge="1" parent="37" source="17" style="edgeStyle=none;html=1;rounded=0;strokeWidth=1;strokeColor=#333333;startArrow=none;endArrow=none;startFill=1;endFill=1;" target="16">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="25" edge="1" parent="37" source="15" style="edgeStyle=none;html=1;rounded=0;strokeWidth=1;strokeColor=#333333;startArrow=none;endArrow=none;startFill=1;endFill=1;" target="18">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="26" edge="1" parent="37" source="16" style="edgeStyle=none;html=1;rounded=0;strokeWidth=1;strokeColor=#333333;startArrow=none;endArrow=none;startFill=1;endFill=1;" target="19">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="27" edge="1" parent="37" source="19" style="edgeStyle=none;html=1;rounded=0;strokeWidth=1;strokeColor=#333333;startArrow=none;endArrow=none;startFill=1;endFill=1;" target="20">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="28" parent="37" style="text;html=1;strokeColor=none;fillColor=none;fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=10;fontColor=#131300;align=center;verticalAlign=middle;fontStyle=1;" value="Developer" vertex="1">
+          <mxGeometry height="14" width="64" x="240" y="62" as="geometry" />
+        </mxCell>
+        <mxCell id="29" parent="37" style="text;html=1;strokeColor=none;fillColor=none;fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=10;fontColor=#131300;align=left;verticalAlign=middle;" value="Verified Environment" vertex="1">
+          <mxGeometry height="14" width="130" x="401" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="30" parent="37" style="text;html=1;strokeColor=none;fillColor=none;fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=10;fontColor=#131300;align=left;verticalAlign=middle;" value="vanilla compost running locally" vertex="1">
+          <mxGeometry height="14" width="196" x="332" y="208" as="geometry" />
+        </mxCell>
+        <mxCell id="31" parent="37" style="text;html=1;strokeColor=none;fillColor=none;fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=10;fontColor=#131300;align=left;verticalAlign=middle;" value="bootstrap.sh" vertex="1">
+          <mxGeometry height="14" width="82" x="668" y="318" as="geometry" />
+        </mxCell>
+        <mxCell id="32" parent="37" style="text;html=1;strokeColor=none;fillColor=none;fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=10;fontColor=#131300;align=left;verticalAlign=middle;" value="greenTest.ipynb" vertex="1">
+          <mxGeometry height="14" width="100" x="650" y="136" as="geometry" />
+        </mxCell>
+        <mxCell id="33" parent="37" style="text;html=1;strokeColor=none;fillColor=none;fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=10;fontColor=#131300;align=left;verticalAlign=middle;" value="vanilla compost&lt;div&gt;or your own repo&lt;/div&gt;" vertex="1">
+          <mxGeometry height="14" width="100" x="569" y="267" as="geometry" />
+        </mxCell>
+        <mxCell id="34" parent="37" style="text;html=1;strokeColor=none;fillColor=none;fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=10;fontColor=#131300;align=left;verticalAlign=middle;" value="bash" vertex="1">
+          <mxGeometry height="14" width="40" x="851" y="332" as="geometry" />
+        </mxCell>
+        <mxCell id="35" parent="37" style="text;html=1;strokeColor=none;fillColor=none;fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=10;fontColor=#131300;align=left;verticalAlign=middle;" value="linux" vertex="1">
+          <mxGeometry height="14" width="40" x="851" y="383" as="geometry" />
+        </mxCell>
+        <mxCell id="36" parent="37" style="text;html=1;strokeColor=none;fillColor=none;fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=13;fontColor=#131300;align=center;verticalAlign=middle;fontStyle=1;" value="GreenTest - Bootstrapping &amp;amp; Verifying a Linux Environment" vertex="1">
+          <mxGeometry height="17" width="400" x="362" y="20" as="geometry" />
+        </mxCell>
+        <UserObject label="" mermaidId="n:anchor:Developer" mermaidBaseStyle="ellipse;html=1;fillColor=none;strokeColor=none;" mermaidBaseValue="" id="WhB93D39c6ZR0gLFBKOb-40">
+          <mxCell parent="37" style="ellipse;html=1;fillColor=none;strokeColor=none;" vertex="1">
+            <mxGeometry height="12" width="12" x="280" y="76" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" mermaidId="n:component:Verified Environment" mermaidBaseStyle="ellipse;html=1;fillColor=#ffffff;strokeColor=#333333;strokeWidth=1;" mermaidBaseValue="" id="ikJxmT06obLQD2iymKop-37">
+          <mxCell parent="37" style="ellipse;html=1;fillColor=#ffffff;strokeColor=#333333;strokeWidth=1;" vertex="1">
+            <mxGeometry height="12" width="12" x="268" y="78" as="geometry" />
+          </mxCell>
+        </UserObject>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

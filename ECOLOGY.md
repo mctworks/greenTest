@@ -26,6 +26,11 @@ Source maps are draw.io XML, exported to PNG or SVG for embedding. See the `maps
 
 ## Bootstrapping a new machine
 
+Debian-based Linux only (Debian, Ubuntu, WSL2 running either, etc.) - every
+`bootstrap.sh` and setup script in this ecosystem assumes `apt` and targets
+that platform exclusively. Nothing here is tested or maintained for macOS or
+Windows outside WSL.
+
 1. Confirm `git` is available (usually preinstalled, or one prompt/package-manager command away).
 2. Clone this repo (`greenTest`) - it's the one that explains everything else.
 3. Clone whichever other repos the work in front of you needs, as siblings of this one.
@@ -36,6 +41,9 @@ Source maps are draw.io XML, exported to PNG or SVG for embedding. See the `maps
 - This file is what any AI coding agent should read before touching a repo in this ecosystem (or a tool-specific copy of it, like a project's own `LLM.md`). A thin `AGENTS.md` sits at the root of this repo purely so tools that auto-discover that filename by convention still find their way here.
 - AI belongs on the mapping/thinking side of the work (steps 1-2 above), not as a shortcut past it. Agents can help with reading existing maps and describing what they show, drafting a first-pass map for a human to review, or helping separate a problem before it's mapped, among other tasks. Automation and code come after a map exists and has been reviewed, whether the one holding the keyboard is a person or a model.
 - For unattended/autonomous agent loops against a well-defined batch of tasks, see `ralph-loop-template/` in this repo. It's a scaffold, not a replacement for this file. The loop still needs a map and a scoped task list before it starts.
+- Multi-agent pairing sessions coordinate through `~/.ecology/`. The top-level `session.md` indexes per-project directories (`.ecology/$PROJECT/`); each has its own `session.md` rollup plus one session log per agent. Read the project's `session.md` and every session log there before starting work on that project - that's where prior decisions, scope changes, and open blockers are logged, not just in the project's own `spec.md`. Only ever write to your own session log; never edit another agent's file or merge them into one - that's how concurrent agents avoid clobbering each other's notes.
+- Session log naming defaults to `$provider-session.md` (e.g. `claude-session.md`, `gemini-session.md`) - "claude" covers whichever underlying model is actually running (Sonnet, Opus, Fable, ...) unless that distinction starts mattering. Only split into `$provider-$model-session.md` (e.g. `claude-fable-session.md`, `claude-sonnet-session.md`) when you actually need to tell models from the same provider apart - for instance, running two of them side by side on comparable work to compare output. Don't split preemptively.
+- `~/.ecology/envs/<workstation-label>.json` records each workstation's hardware and which agents are available/orchestrating there - see `AI/AI_tuis.ipynb`. Don't infer a workstation's identity from its hostname; it isn't reliable.
 
 ## Related repos
 
