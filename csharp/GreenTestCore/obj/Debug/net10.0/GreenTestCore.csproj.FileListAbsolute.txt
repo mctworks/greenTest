@@ -1,0 +1,12 @@
+/home/deck/greenTest/csharp/GreenTestCore/bin/Debug/net10.0/GreenTestCore.deps.json
+/home/deck/greenTest/csharp/GreenTestCore/bin/Debug/net10.0/GreenTestCore.dll
+/home/deck/greenTest/csharp/GreenTestCore/bin/Debug/net10.0/GreenTestCore.pdb
+/home/deck/greenTest/csharp/GreenTestCore/obj/Debug/net10.0/GreenTestCore.GeneratedMSBuildEditorConfig.editorconfig
+/home/deck/greenTest/csharp/GreenTestCore/obj/Debug/net10.0/GreenTestCore.AssemblyInfoInputs.cache
+/home/deck/greenTest/csharp/GreenTestCore/obj/Debug/net10.0/GreenTestCore.AssemblyInfo.cs
+/home/deck/greenTest/csharp/GreenTestCore/obj/Debug/net10.0/GreenTestCore.csproj.CoreCompileInputs.cache
+/home/deck/greenTest/csharp/GreenTestCore/obj/Debug/net10.0/GreenTestCore.sourcelink.json
+/home/deck/greenTest/csharp/GreenTestCore/obj/Debug/net10.0/GreenTestCore.dll
+/home/deck/greenTest/csharp/GreenTestCore/obj/Debug/net10.0/refint/GreenTestCore.dll
+/home/deck/greenTest/csharp/GreenTestCore/obj/Debug/net10.0/GreenTestCore.pdb
+/home/deck/greenTest/csharp/GreenTestCore/obj/Debug/net10.0/ref/GreenTestCore.dll
