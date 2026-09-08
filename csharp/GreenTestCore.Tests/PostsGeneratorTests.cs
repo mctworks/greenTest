@@ -2,6 +2,28 @@ using GreenTestCore;
 
 namespace GreenTestCore.Tests;
 
+public class ShouldSkipPostFileTests
+{
+    [Theory]
+    [InlineData("post-template.md")]
+    [InlineData("template.md")]
+    [InlineData("index.md")]
+    [InlineData("blog-index-page.md")]
+    public void SkipsFilenamesContainingTemplateOrIndex(string filename)
+    {
+        Assert.True(PostsGenerator.ShouldSkipPostFile(filename));
+    }
+
+    [Theory]
+    [InlineData("hello-compost.md")]
+    [InlineData("greenTest-Message.md")]
+    [InlineData("my-first-post.md")]
+    public void DoesNotSkipOrdinaryPostFilenames(string filename)
+    {
+        Assert.False(PostsGenerator.ShouldSkipPostFile(filename));
+    }
+}
+
 public class ExtractTitleFromContentTests
 {
     [Fact]
@@ -89,6 +111,18 @@ public class DateSortKeyTests
         DateTime newer = PostsGenerator.DateSortKey("2024-06-01");
         Assert.True(newer > older);
     }
+
+    [Fact]
+    public void SameDate_InBothFormats_SortsAsEqual()
+    {
+        // "January 15, 2024" and "2024-01-15" represent the same day - a
+        // post using one format and a post using the other should sort as
+        // simultaneous, not as if one were newer than the other just
+        // because of which format its author happened to write.
+        DateTime fromMonthName = PostsGenerator.DateSortKey("January 15, 2024");
+        DateTime fromIso = PostsGenerator.DateSortKey("2024-01-15");
+        Assert.Equal(fromMonthName, fromIso);
+    }
 }
 
 public class BuildPostsListHtmlTests
@@ -113,6 +147,29 @@ public class BuildPostsListHtmlTests
     {
         string html = PostsGenerator.BuildPostsListHtml(new List<PostsGenerator.PostEntry>());
         Assert.Contains("No posts available yet.", html);
+    }
+
+    [Fact]
+    public void PreservesGivenOrder_DoesNotReSort()
+    {
+        // BuildPostsListHtml trusts the caller to have already sorted -
+        // GeneratePostsHtml is what actually sorts, via DateSortKey. This
+        // guards against a future change accidentally adding a second,
+        // possibly-conflicting sort in here too: entries given oldest-first
+        // should come out oldest-first, even though that's the "wrong"
+        // order GeneratePostsHtml would never actually produce.
+        var entries = new List<PostsGenerator.PostEntry>
+        {
+            new("old-post", "Old Post", "2023-01-01"),
+            new("new-post", "New Post", "2024-06-01"),
+        };
+
+        string html = PostsGenerator.BuildPostsListHtml(entries);
+
+        int oldIndex = html.IndexOf("Old Post", StringComparison.Ordinal);
+        int newIndex = html.IndexOf("New Post", StringComparison.Ordinal);
+        Assert.True(oldIndex >= 0 && newIndex >= 0, "Both entries should appear in the output.");
+        Assert.True(oldIndex < newIndex, "Entries should appear in the order given, not re-sorted.");
     }
 }
 

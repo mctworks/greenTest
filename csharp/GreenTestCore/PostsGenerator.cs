@@ -80,6 +80,18 @@ public static class PostsGenerator
         return DateTime.MinValue;
     }
 
+    /// <summary>
+    /// Whether a markdown filename found in posts/ should be skipped rather
+    /// than treated as an actual post - matches generate_posts.py's and
+    /// generate_posts.js's own filtering (a name containing "template" or
+    /// "index" is assumed to be scaffolding, not real content). Pure
+    /// function, checks the filename only - no file I/O.
+    /// </summary>
+    public static bool ShouldSkipPostFile(string filename)
+    {
+        return filename.Contains("template") || filename.Contains("index");
+    }
+
     public record PostEntry(string Name, string Title, string Date);
 
     /// <summary>
@@ -141,7 +153,7 @@ public static class PostsGenerator
         foreach (string filePath in Directory.GetFiles(postsDir, "*.md"))
         {
             string filename = Path.GetFileName(filePath);
-            if (filename.Contains("template") || filename.Contains("index")) continue;
+            if (ShouldSkipPostFile(filename)) continue;
 
             try
             {
